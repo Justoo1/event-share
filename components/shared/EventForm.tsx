@@ -194,7 +194,7 @@ const EventForm = ({userId, type, event, eventId }: EventFormProps) => {
                         <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
                             <Image src="/assets/icons/calendar.svg" height={24} width={24} alt="calendar" className="filter-grey" />
                             <p className="ml-3 whitespace-nowrap text-grey-600">Start Date:</p>
-                            <DatePicker selected={field.value} onChange={(date: Date) => field.onChange(date)} showTimeSelect timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" wrapperClassName="datePicker" />
+                            <DatePicker selected={field.value} onChange={(date: Date | null) => field.onChange(date)} showTimeSelect timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" wrapperClassName="datePicker" />
                         </div>
                     </FormControl>
                     <FormMessage />
@@ -211,7 +211,7 @@ const EventForm = ({userId, type, event, eventId }: EventFormProps) => {
                         <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
                             <Image src="/assets/icons/calendar.svg" height={24} width={24} alt="calendar" className="filter-grey" />
                             <p className="ml-3 whitespace-nowrap text-grey-600">End Date:</p>
-                            <DatePicker selected={field.value} onChange={(date: Date) => field.onChange(date)} showTimeSelect timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" wrapperClassName="datePicker" />
+                            <DatePicker selected={field.value} onChange={(date: Date | null) => field.onChange(date)} showTimeSelect timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" wrapperClassName="datePicker" />
                         </div>
                     </FormControl>
                     <FormMessage />
